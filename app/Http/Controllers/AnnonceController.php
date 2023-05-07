@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 
 use App\Models\Annonce;
-use App\Models\objet;
+use App\Models\Objet;
 use App\Models\dispo;
 use App\Models\Categorie;
 use Illuminate\Support\Facades\Mail;
@@ -16,7 +16,7 @@ class AnnonceController extends Controller
 {
     public static function index(){
         $id = auth()->user()->id;
-        $objets = objet::where('user_id',$id)->get();
+        $objets = Objet::where('user_id',$id)->get();
         $categories = Categorie::all();
         if (Auth::check()) {
             $notifications = DB::table('notifications')
@@ -32,7 +32,7 @@ class AnnonceController extends Controller
     }
     public static function store(Request $request){
         $id_objet = request('objet');
-        $objet = objet::where('id',$id_objet)->first();
+        $objet = Objet::where('id',$id_objet)->first();
         $annonce = new annonce();
         $annonce->Nom = request('Nom');
         $annonce->Description = request('Description');
