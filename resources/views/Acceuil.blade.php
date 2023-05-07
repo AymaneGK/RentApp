@@ -48,8 +48,8 @@
                                  </label>
                                  score :
 									<select id="input_select5" class="input-select">
-                                        <option value="ASC">mieux noté</option>
-                                        <option value="DESC">moins bien noté</option>
+                                        <option value="DESC">mieux noté</option>
+                                        <option value="ASC">moins bien noté</option>
                                         </select>
                                  </label>
                         </div>
