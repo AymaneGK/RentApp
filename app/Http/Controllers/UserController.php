@@ -122,7 +122,7 @@ public function index(){
         // Check if the $contrat array is not empty
         if (!empty($contrat)) {
             // Retrieve User data with the ID equal to $contrat[0]->id
-            $user = DB::select ('select * from users where id=?', [$contrat[0]->id]);
+            $user = DB::select ('select * from users where id=?', [$contrat[0]->id_partenaire]);
 
             // Retrieve User data with the ID equal to $contrat[0]->id_client
             $userClient = DB::select ('select * from users where id=?', [$contrat[0]->id_client]);
