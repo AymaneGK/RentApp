@@ -107,7 +107,7 @@
                                     <a class="dropdown-item" href="/add_ann">
                                         Ajouter une annonce
                                     </a>
-                                    <a class="dropdown-item" href="/consulter">
+                                    <a class="dropdown-item" href="/annonces">
                                         Consulter vos annonces
                                     </a>
                                 </div>
