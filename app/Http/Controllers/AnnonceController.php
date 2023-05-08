@@ -108,7 +108,7 @@ class AnnonceController extends Controller
             }
             $dispo->disponibilité = $binaryString;
             $dispo->month = $binaryString2;
-            $annonce->is_visible = "0";
+            $annonce->is_visible = "1";
             $annonce->user_id = auth()->user()->id ;
             $annonce->date_dispo_debut = request('date_dispo_debut2');
             $annonce->date_dispo_fin = request('date_dispo_fin2');
