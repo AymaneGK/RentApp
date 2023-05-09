@@ -137,7 +137,7 @@ Route::get('/test',function(){
     })->middleware(['auth', 'verified']);
 Route::get('/email',[AnnonceController::class,'Sendmail']);
 Route::get('/consulter_objects',[ObjetController::class,'consulter'])->middleware(['auth', 'verified']);
-Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
+Route::post('/reservations', [ReservationController::class, 'store'])->middleware(['auth', 'verified'])->name('reservations.store');
 Route::get('/demandes-de-reservation', [LocationController::class,'demandesDeReservation'])->name('locations.demandes-de-reservation');
 Route::post('/locations/{id}/confirm', [LocationController::class, 'confirm'])->name('locations.confirm');
 Route::post('/locations/{id}/refuse', [LocationController::class, 'refuse'])->name('locations.refuse');
